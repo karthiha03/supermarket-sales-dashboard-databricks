@@ -1,12 +1,14 @@
 # 🛒 Supermarket Sales Dashboard using Databricks SQL
 
-## 📌 Project Overview
+## 📖 Project Overview
 
-This project demonstrates end-to-end sales analysis using **Databricks SQL**. The dataset was analyzed to generate business insights through SQL queries and interactive dashboards. The project focuses on key performance indicators (KPIs), revenue trends, customer behavior, and product performance to support data-driven business decisions.
+This project demonstrates an end-to-end **Sales Analytics Dashboard** built using **Databricks SQL**. The objective is to analyze supermarket sales transactions and transform raw data into meaningful business insights through SQL queries and interactive dashboards.
+
+The project covers KPI analysis, revenue trends, customer behavior, product performance, and payment analysis to support data-driven business decisions.
 
 ---
 
-## 🚀 Tech Stack
+## 🚀 Technologies Used
 
 - Databricks SQL
 - Delta Lake
@@ -21,7 +23,7 @@ This project demonstrates end-to-end sales analysis using **Databricks SQL**. Th
 
 **Dataset:** Supermarket Sales Dataset
 
-The dataset contains transactional sales data including:
+The dataset contains transactional information including:
 
 - Invoice ID
 - Branch
@@ -33,147 +35,200 @@ The dataset contains transactional sales data including:
 - Quantity
 - Sales
 - Gross Income
-- Rating
 - Payment Method
+- Rating
 - Date & Time
 
 ---
 
-## 📊 Dashboard Overview
+# 📊 Dashboard
 
-### KPI Dashboard
+## 1️⃣ KPI Dashboard
 
-![KPI Dashboard](dashboard/dashboard_kpis.png)
+This dashboard provides an overview of the business through key performance indicators.
 
----
-
-### Revenue Analysis
-
-![Revenue Dashboard](dashboard/dashboard_revenue.png)
-
----
-
-### Customer Analysis
-
-![Customer Dashboard](dashboard/dashboard_customer.png)
-
----
-
-### Product Analysis
-
-![Product Dashboard](dashboard/dashboard_product.png)
-
----
-
-## 📈 Key Performance Indicators (KPIs)
+**KPIs Included**
 
 - Total Revenue
 - Total Transactions
 - Average Bill Value
 - Average Customer Rating
-- Total Gross Income
+- Gross Income
+
+![KPI Dashboard](Dashboard/Dashboard_KPIs.png)
 
 ---
 
-## 📉 Revenue Analysis
+## 2️⃣ Revenue Analysis Dashboard
 
-The dashboard provides insights into:
+Analyzes sales performance across different business dimensions.
+
+**Insights**
 
 - Revenue by Product Line
 - Revenue by Branch
 - Revenue by City
-- Daily Revenue Trend
-- Monthly Revenue Trend
-- Revenue by Hour
+
+![Revenue Dashboard](Dashboard/Dashboard_Revenue.png)
 
 ---
 
-## 👥 Customer Analysis
+## 3️⃣ Revenue Trend Dashboard
 
-Customer insights include:
+Shows how revenue changes over time.
+
+**Insights**
+
+- Daily Revenue
+- Monthly Revenue
+- Revenue by Hour
+
+![Revenue Trend](Dashboard/Dashboard_Revenue2.png)
+
+---
+
+## 4️⃣ Customer Analysis Dashboard
+
+Provides insights into customer purchasing patterns.
+
+**Insights**
 
 - Revenue by Customer Type
 - Revenue by Gender
-- Payment Method Distribution
-- Average Customer Rating
+- Daily Revenue Trend
+
+![Customer Dashboard](Dashboard/Dashboard_daily_revenue-customer_category.png)
 
 ---
 
-## 📦 Product Analysis
+## 5️⃣ Payment & Quantity Dashboard
 
-Product performance metrics include:
+Analyzes product quantity sold and preferred payment methods.
 
+**Insights**
+
+- Quantity Sold by Product Line
+- Payment Method Distribution
+
+![Payment Dashboard](Dashboard/Dashboard_Quantity-payment_distribution.png)
+
+---
+
+# 📈 SQL Analysis
+
+The project includes SQL queries for:
+
+### KPI Analysis
+
+- Total Revenue
+- Total Transactions
+- Average Bill
+- Average Rating
+- Gross Income
+
+### Revenue Analysis
+
+- Revenue by Branch
+- Revenue by City
 - Revenue by Product Line
+- Revenue by Hour
+- Daily Revenue
+- Monthly Revenue
+
+### Customer Analysis
+
+- Revenue by Customer Type
+- Revenue by Gender
+- Payment Distribution
+
+### Product Analysis
+
 - Average Product Rating
 - Average Quantity Sold
 - Gross Income by Product Line
 - Top 5 Highest Sales Transactions
 
----
+### Advanced SQL
 
-## 💡 SQL Concepts Demonstrated
-
-This project demonstrates the use of:
-
-- Aggregate Functions (`SUM`, `AVG`, `COUNT`)
-- `GROUP BY`
-- `ORDER BY`
-- Date & Time Functions
 - Window Functions
-- `RANK()`
-- `DENSE_RANK()`
-- `ROW_NUMBER()`
-- Running Totals
-- Common Table Expressions (CTEs)
+- Ranking Functions
+- Running Total
+- Revenue Share
+- ROW_NUMBER()
+- RANK()
+- DENSE_RANK()
 
 ---
 
-## 📁 Repository Structure
+# 📁 Repository Structure
 
 ```text
 supermarket-sales-dashboard-databricks
 │
-├── README.md
-├── data
+├── Dashboard
+│   ├── Dashboard_KPIs.png
+│   ├── Dashboard_Revenue.png
+│   ├── Dashboard_Revenue2.png
+│   ├── Dashboard_daily_revenue-customer_category.png
+│   └── Dashboard_Quantity-payment_distribution.png
+│
+├── Data
 │   └── supermarket_sales.csv
-├── dashboard
-│   ├── dashboard_kpis.png
-│   ├── dashboard_revenue.png
-│   ├── dashboard_customer.png
-│   └── dashboard_product.png
-└── sql
-    ├── 01_kpi_queries.sql
-    ├── 02_revenue_analysis.sql
-    ├── 03_customer_analysis.sql
-    ├── 04_product_analysis.sql
-    └── 05_operational_analysis.sql
+│
+├── SQL
+│   ├── 01_kpi_queries.sql
+│   ├── 02_revenue_analysis.sql
+│   ├── 03_customer_analysis.sql
+│   ├── 04_product_analysis.sql
+│   └── 05_operational_analysis.sql
+│
+└── README.md
 ```
 
 ---
 
-## ▶️ How to Run
+# ▶️ How to Run
 
-1. Import the supermarket sales dataset into Databricks.
-2. Create the table in your Databricks workspace.
-3. Execute the SQL scripts from the `sql` folder.
+1. Upload the supermarket sales dataset into Databricks.
+2. Create the table from the CSV dataset.
+3. Execute the SQL scripts located in the **SQL** folder.
 4. Build visualizations using Databricks SQL.
-5. Create dashboards to explore business insights.
+5. Combine the visualizations into interactive dashboards.
 
 ---
 
-## 🎯 Business Insights
+# 💼 Skills Demonstrated
+
+- SQL Query Writing
+- Business Intelligence
+- Dashboard Development
+- Data Analysis
+- KPI Reporting
+- Window Functions
+- Data Visualization
+- Databricks SQL
+- Delta Lake
+- Analytical Thinking
+
+---
+
+# 📌 Business Insights
 
 - Identified the highest revenue-generating product lines.
-- Compared sales performance across branches and cities.
-- Analyzed customer purchasing behavior and payment preferences.
-- Evaluated product performance using ratings and gross income.
-- Built interactive dashboards to support business decision-making.
+- Compared branch and city-wise sales performance.
+- Analyzed customer purchasing behavior.
+- Evaluated payment preferences across customers.
+- Measured product performance using sales, ratings, and gross income.
+- Built interactive dashboards for business reporting.
 
 ---
 
-## 👩‍💻 Author
+# 👩‍💻 Author
 
 **Karthiha M**
 
 - LinkedIn: https://www.linkedin.com/in/karthihamuthuraj/
-- GitHub: https://github.com/karthiha03
+  
+
+---
+⭐ If you found this project helpful, consider giving it a star!
